@@ -27,6 +27,16 @@ public class SecurityUtils {
 	 }//end of hashString method 
 	 
 	 
+	 /**
+	     * Checks if the given input string matches a given hash using the specified algorithm.
+	     * 
+	     * @param input The string to be hashed and checked.
+	     * @param hash The hash to compare against.
+	     * @param algorithm The hashing algorithm (MD5, SHA1, SHA256).
+	     * @return True if the input matches the hash; false otherwise.
+	     * @throws NoSuchAlgorithmException If the hashing algorithm is not supported.
+	     */
+	 
 	 
 	 public static boolean matchesHash(String input, String hash, HashAlgorithm algorithm) throws NoSuchAlgorithmException {
 	        
