@@ -31,4 +31,20 @@ class Testing {
 	    
 	 }//end of testMatchesHash 
 	 
+	 
+	 @Test
+	    void testGenerateSaltedHash() throws NoSuchAlgorithmException {
+		 
+	        String input = "test";
+	        
+	        String salt = "randomSalt";
+	        
+	        String saltedHash = SecurityUtils.generateSaltedHash(input, salt, HashAlgorithm.MD5);
+	        
+	        assertNotNull(saltedHash);
+	        
+	        assertNotEquals(SecurityUtils.hashString(input, HashAlgorithm.MD5), saltedHash);
+	    
+	 }//end of testGenerateSaltedHash
+	 
 }//end of test class 
