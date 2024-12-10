@@ -46,6 +46,18 @@ public class SecurityUtils {
 	    
 	 }//end of matchesHash
 	 
+	 
+	 /**
+	     * Generates a salted hash for the given input string using the specified algorithm.
+	     * 
+	     * @param input The string to be hashed.
+	     * @param salt The salt to append to the input.
+	     * @param algorithm The hashing algorithm (MD5, SHA1, SHA256).
+	     * @return The salted hash in Base64 format.
+	     * @throws NoSuchAlgorithmException If the hashing algorithm is not supported.
+	     */
+	 
+	 
 	 public static String generateSaltedHash(String input, String salt, HashAlgorithm algorithm) throws NoSuchAlgorithmException {
 	        
 		 return hashString(input + salt, algorithm);
