@@ -25,5 +25,15 @@ public class SecurityUtils {
 	        return Base64.getEncoder().encodeToString(hash);
 	    
 	 }//end of hashString method 
+	 
+	 
+	 
+	 public static boolean matchesHash(String input, String hash, HashAlgorithm algorithm) throws NoSuchAlgorithmException {
+	        
+		 String computedHash = hashString(input, algorithm);
+	        
+	        return computedHash.equals(hash);
+	    
+	 }//end of matchesHash
 
 }//end of securityUtils class 
