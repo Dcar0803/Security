@@ -45,5 +45,10 @@ public class SecurityUtils {
 	        return computedHash.equals(hash);
 	    
 	 }//end of matchesHash
+	 
+	 public static String generateSaltedHash(String input, String salt, HashAlgorithm algorithm) throws NoSuchAlgorithmException {
+	        
+		 return hashString(input + salt, algorithm);
+	    }
 
 }//end of securityUtils class 
