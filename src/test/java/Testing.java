@@ -17,4 +17,18 @@ class Testing {
 	        
 	    }//end of testHashString
 	 
+	 
+	 @Test
+	    void testMatchesHash() throws NoSuchAlgorithmException {
+	        
+		 String input = "password123";
+	        
+	        String hash = SecurityUtils.hashString(input, HashAlgorithm.SHA256);
+	       
+	        assertTrue(SecurityUtils.matchesHash(input, hash, HashAlgorithm.SHA256));
+	       
+	        assertFalse(SecurityUtils.matchesHash("wrongPassword", hash, HashAlgorithm.SHA256));
+	    
+	 }//end of testMatchesHash 
+	 
 }//end of test class 
